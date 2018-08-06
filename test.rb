@@ -1,9 +1,13 @@
-def take_this
-    yield "present"
+def print_block_result
+    block_result = yield
+    puts block_result
 end
 
-take_this do |thing|
-    puts "do/end block got #{thing}"
+print_block_result {1 + 1}
+
+print_block_result do
+    "I'm not the last expression so I'm not the return value"
+    "I'm the result"
 end
 
-take_this { |thing| puts "brackets block got #{thing}" }
+print_block_result { "I hated Truncated".include?("Truncated")}
