@@ -1,13 +1,6 @@
-def print_block_result
-    block_result = yield
-    puts block_result
-end
-
-print_block_result {1 + 1}
-
-print_block_result do
-    "I'm not the last expression so I'm not the return value"
-    "I'm the result"
-end
-
-print_block_result { "I hated Truncated".include?("Truncated")}
+my_hash = {"one" => "two", :three => "four", 5 => "six"}
+puts my_hash[5]
+puts my_hash["one"]
+puts my_hash[:three]
+my_hash["seven"] = 8
+puts my_hash["seven"]
