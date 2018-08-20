@@ -23,4 +23,5 @@ while current_year != end_year + 1
 
 end
 
+puts "----------------"
 puts "There are #{leap_years} leap years between #{start_year} and #{current_year}"
